@@ -2,7 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #f6faff;
 }
+
 .card {
   background-color: #fff;
   border-radius: 0.5rem;
@@ -11,7 +14,14 @@
   margin: 1rem;
   width: 100px;
   height: 100px;
+  font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.card:hover{
+  cursor: pointer;
+  transform: scale(0.95);
+  transition: all 0.3s ease-in-out;
 }
