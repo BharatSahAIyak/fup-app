@@ -48,8 +48,9 @@ export default function Home() {
 
   const handleCardClick = (path: string, param?: string) => {
     if(!loginData) return;
+    console.log("token:", loginData)
     setUrl(
-      `${process.env.NEXT_PUBLIC_APP_URL}/${path}?userId=${localStorage.getItem('userId')}&auth=${loginData}&navbar=hidden&${param}`
+      `${process.env.NEXT_PUBLIC_APP_URL}/${path}?userId=${localStorage.getItem('userId')}&auth=${loginData}&navbar=hidden`
     );
   };
 
@@ -95,6 +96,7 @@ export default function Home() {
           src={url}
           style={{ width: '100%', height: 'calc(100% - 45px)', border: 'none' }}
           sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-downloads"
+          allow='camera; microphone'
         ></iframe>
       )}
     </div>
